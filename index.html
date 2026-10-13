@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- 1. Réglages de base de la page -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planéo – La prise de rendez-vous simple pour les indépendants</title>
+  <meta name="description" content="Planéo (projet de démonstration) : une page de présentation pour un outil fictif de prise de rendez-vous en ligne.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Bandeau d'honnêteté : ce site est une démonstration -->
+  <div class="demo-banner">
+    Projet de démonstration réalisé par Hendrick Lourenco · Planéo est une marque fictive
+  </div>
+
+  <!-- 2. En-tête : logo + menu -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">Planéo</a>
+      <nav class="nav">
+        <a href="#avantages">Avantages</a>
+        <a href="#fonctionnement">Fonctionnement</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#contact" class="btn btn--small">Essai gratuit</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 3. Section principale (« hero ») : le message en une phrase -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow">Pour coiffeurs, coachs, thérapeutes, artisans…</p>
+          <h1>Vos clients réservent en ligne.<br>Vous, vous travaillez.</h1>
+          <p class="lead">Planéo remplace les appels et les SMS par une page de réservation à votre nom. Vos clients choisissent un créneau, reçoivent un rappel, et votre agenda se remplit tout seul.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn">Essayer 14 jours gratuitement</a>
+            <a href="#fonctionnement" class="btn btn--ghost">Voir comment ça marche</a>
+          </div>
+        </div>
+
+        <!-- Maquette d'agenda dessinée en HTML/CSS (pas d'image) -->
+        <div class="mockup" aria-hidden="true">
+          <div class="mockup__head">Mardi 14 octobre</div>
+          <div class="slot slot--taken">09:00 · Coupe – Julie</div>
+          <div class="slot">10:00 · Disponible</div>
+          <div class="slot slot--taken">11:00 · Couleur – Marc</div>
+          <div class="slot">14:00 · Disponible</div>
+          <div class="slot slot--taken">15:30 · Brushing – Inès</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Avantages : 3 cartes -->
+    <section id="avantages" class="section">
+      <div class="container">
+        <h2>Ce que Planéo change pour vous</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card__icon">⏱</div>
+            <h3>Moins d'appels</h3>
+            <p>Vos clients réservent 24 h/24 sans vous interrompre pendant une prestation.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🔔</div>
+            <h3>Moins de rendez-vous oubliés</h3>
+            <p>Un rappel automatique par e-mail ou SMS est envoyé la veille.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">📅</div>
+            <h3>Un agenda toujours à jour</h3>
+            <p>Bloquez vos congés en un clic : les créneaux disparaissent de votre page.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Fonctionnement en 3 étapes -->
+    <section id="fonctionnement" class="section section--alt">
+      <div class="container">
+        <h2>Prêt en 3 étapes</h2>
+        <ol class="steps">
+          <li><strong>Créez votre compte</strong><span>Indiquez vos prestations, leur durée et vos horaires.</span></li>
+          <li><strong>Partagez votre lien</strong><span>Sur Instagram, Google ou par SMS : planeo.fr/votre-nom.</span></li>
+          <li><strong>Recevez les réservations</strong><span>Chaque rendez-vous arrive dans votre agenda et sur votre téléphone.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6. Tarifs -->
+    <section id="tarifs" class="section">
+      <div class="container">
+        <h2>Des tarifs simples</h2>
+        <p class="center muted">Tarifs fictifs, à titre de démonstration.</p>
+        <div class="pricing">
+          <article class="price">
+            <h3>Découverte</h3>
+            <p class="price__amount">0 €<span>/mois</span></p>
+            <ul>
+              <li>Jusqu'à 20 rendez-vous par mois</li>
+              <li>Page de réservation</li>
+              <li>Rappels par e-mail</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Commencer</a>
+          </article>
+          <article class="price price--featured">
+            <p class="badge">Le plus choisi</p>
+            <h3>Pro</h3>
+            <p class="price__amount">19 €<span>/mois</span></p>
+            <ul>
+              <li>Rendez-vous illimités</li>
+              <li>Rappels par SMS</li>
+              <li>Paiement d'un acompte en ligne</li>
+            </ul>
+            <a href="#contact" class="btn">Essayer gratuitement</a>
+          </article>
+          <article class="price">
+            <h3>Équipe</h3>
+            <p class="price__amount">39 €<span>/mois</span></p>
+            <ul>
+              <li>Jusqu'à 5 agendas</li>
+              <li>Statistiques de remplissage</li>
+              <li>Support prioritaire</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Nous contacter</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ : <details> s'ouvre et se ferme sans JavaScript -->
+    <section id="faq" class="section section--alt">
+      <div class="container container--narrow">
+        <h2>Questions fréquentes</h2>
+        <details>
+          <summary>Faut-il installer une application ?</summary>
+          <p>Non. Planéo fonctionne dans le navigateur, sur ordinateur comme sur téléphone.</p>
+        </details>
+        <details>
+          <summary>Puis-je arrêter quand je veux ?</summary>
+          <p>Oui, l'abonnement est sans engagement et se résilie en un clic.</p>
+        </details>
+        <details>
+          <summary>Mes données sont-elles protégées ?</summary>
+          <p>Les données sont hébergées en Europe et ne sont jamais revendues.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. Appel à l'action + formulaire -->
+    <section id="contact" class="section cta">
+      <div class="container container--narrow">
+        <h2>Essayez Planéo 14 jours, sans carte bancaire</h2>
+        <form id="signup-form" class="form" novalidate>
+          <label for="email">Votre adresse e-mail</label>
+          <div class="form__row">
+            <input type="email" id="email" name="email" placeholder="vous@exemple.fr" required>
+            <button type="submit" class="btn">Commencer</button>
+          </div>
+          <p id="form-message" class="form__message" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. Pied de page -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Planéo — marque fictive. Projet de démonstration conçu et développé par Hendrick Lourenco, développeur web freelance.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
